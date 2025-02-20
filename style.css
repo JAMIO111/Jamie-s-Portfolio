@@ -457,6 +457,17 @@ nav button:hover {
   padding: 100px 70px;
   gap: 70px;
 }
+.underline {
+  width: 20vw;
+  height: 5px;
+  margin-bottom: 20px;
+}
+#purple .underline {
+  background-color: cornsilk;
+}
+#yellow .underline {
+  background-color: black;
+}
 #yellow {
   background: linear-gradient(20deg, rgb(255, 213, 0) 30%, rgb(255, 255, 0));
   color: black;
