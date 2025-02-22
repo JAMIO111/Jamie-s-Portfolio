@@ -1,133 +1,18 @@
-.smooch-sans-normal {
-  font-family: "Smooch Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.be-vietnam-pro-thin {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.be-vietnam-pro-extralight {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.be-vietnam-pro-light {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.be-vietnam-pro-regular {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.be-vietnam-pro-medium {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.be-vietnam-pro-semibold {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.be-vietnam-pro-bold {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.be-vietnam-pro-extrabold {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.be-vietnam-pro-black {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.be-vietnam-pro-thin-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.be-vietnam-pro-extralight-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.be-vietnam-pro-light-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.be-vietnam-pro-regular-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.be-vietnam-pro-medium-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.be-vietnam-pro-semibold-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.be-vietnam-pro-bold-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.be-vietnam-pro-extrabold-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.be-vietnam-pro-black-italic {
-  font-family: "Be Vietnam Pro", serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
 :root {
-  --Primary-BG: hsl(0, 0%, 90%);
-  --Secondary-BG: hsl(0, 0%, 80%);
+  --Primary-BG: hsl(0, 0%, 97%);
+  --Secondary-BG: hsl(0, 0%, 85%);
   --Primary-Text: hsl(0, 0%, 0%);
   --Secondary-Text: hsl(0, 0%, 35%);
   --Accent-color: hsl(246, 80%, 45%);
   --Accent-color-2: HSL(195, 80%, 65%);
   --Hover-color: hsl(0, 0%, 93%);
-  --Shadow: rgba(0, 0, 0, 0.1);
+  --Shadow: rgba(0, 0, 0, 0.045);
   --border-color: hsl(0, 0%, 50%);
   --nav-BG: hsl(0, 0%, 100%);
-  --brand-blue: hsl(208, 92%, 27%);
+  --brand-yellow: hsl(51, 100%, 50%);
   --side-nav-BG: hsl(0, 0%, 90%, 0.5);
   --icon-BG: hsl(0, 0%, 85%);
   --light-border: hsl(0, 0%, 80%);
-  --hero-animation-color: hsl(0, 100%, 50%);
   --Card-BG: hsl(0, 0%, 100%);
   --scroll: 0;
 }
@@ -143,11 +28,10 @@
     --Shadow: rgb(255, 255, 255, 0.03);
     --border-color: hsl(0, 0%, 50%);
     --nav-BG: hsl(0, 0%, 8%);
-    --brand-blue: hsl(208, 72%, 67%);
+    --brand-yellow: hsl(51, 100%, 50%);
     --side-nav-BG: hsl(0, 0%, 10%, 0.5);
     --icon-BG: hsl(0, 0%, 15%);
     --light-border: hsl(0, 0%, 20%);
-    --hero-animation-color: hsl(112, 100%, 50%);
     --Card-BG: hsl(0, 0%, 15%);
     --scroll: 0;
   }
@@ -161,11 +45,12 @@
 }
 html {
   color-scheme: light dark;
-  font-family: "Be Vietnam Pro", helvetica, sans-serif;
+  font-family: "Jura", helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
   color: var(--Primary-Text);
+  scroll-behavior: smooth;
 }
 body {
   width: 100%;
@@ -175,6 +60,11 @@ body {
 }
 .header {
   width: 100%;
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .side-nav {
   position: fixed;
@@ -218,28 +108,50 @@ body {
   height: 55px;
   margin: 10px 0 0 15px;
 }
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 999;
+.hero-img {
   width: 100%;
-  background-color: var(--nav-BG);
-  border-bottom: solid 1px var(--Secondary-BG);
-  box-shadow: 3px 3px 5px 0 var(--Shadow);
+  height: 100%;
+  object-fit: cover;
+}
+.hero-animation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+nav {
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+  width: 50%;
+  box-shadow: 0px 3px 5px 0px var(--Shadow);
   justify-content: space-between;
   display: flex;
   align-items: center;
   mix-blend-mode: normal;
+  border-radius: 100px;
 }
-.nav :first-child {
-  margin-right: auto;
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: var(--nav-BG);
+  z-index: -1;
+  border-radius: 100px;
 }
 nav ul {
+  width: 100%;
   display: flex;
   height: 60px;
   list-style: none;
   flex-grow: 1;
   align-items: stretch;
+  justify-content: space-evenly;
 }
 nav li {
   display: flex;
@@ -256,8 +168,7 @@ nav a {
   align-items: center;
 }
 nav a:hover {
-  background-color: var(--Hover-color);
-  color: var(--Primary-Text);
+  color: var(--brand-yellow);
   transition: 0.5s;
 }
 nav h1 {
@@ -284,70 +195,111 @@ nav button:hover {
   border: solid 1px var(--Accent-color);
   transition: 0.3s;
 }
+.hero-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(img/blackwebBG.webp);
+}
 .nav h1 {
+  letter-spacing: -3px;
   padding: 10px 20px;
-  background: linear-gradient(orange, red);
+  background: linear-gradient(rgb(255, 174, 0), rgb(238, 255, 0));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   background-color: #111;
 }
 .hero {
   aspect-ratio: 2/1;
-  margin: 20px;
 }
-.hero-img {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.button-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  border: solid 1px black;
-  border-radius: 30px;
+  gap: 50px;
 }
-.hero-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(img/CodeBG.jpg);
-  filter: blur(4px);
-  border-radius: 30px;
-  z-index: 1;
-  pointer-events: none;
-}
-.intro-wrapper {
-  text-align: center;
+.button-container button {
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: var(--brand-yellow);
+  color: black;
+  border: none;
+  cursor: pointer;
 }
 .hero-animation {
   top: 50%;
   inset: 0;
   transform: translateY(3vw);
-  margin: auto;
   z-index: 998;
   padding: 10px;
   border-radius: 8px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: var(--Primary-BG);
   font-weight: 600;
   box-sizing: content-box;
   justify-content: center;
   align-items: center;
-  gap: 3vw;
+  gap: 1vw;
+}
+.button {
+  width: 360px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: (--brand-yellow);
+  border-radius: 40px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition-duration: 0.5s;
+}
+
+.svgIcon {
+  height: 45px;
+  transition-duration: 1.5s;
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+}
+
+.button:hover {
+  background-color: rgb(255, 217, 0);
+  transition-duration: 0.5s;
+}
+
+.button:active {
+  transform: scale(0.97);
+  transition-duration: 0.2s;
+}
+
+.button:hover .svgIcon {
+  transform: rotate(950deg);
+  transition-duration: 4s;
 }
 .intro-text {
-  font-family: "Smooch Sans";
+  font-family: "Jura", sans-serif;
   font-size: 6vw;
   color: rgb(255, 255, 255);
   font-weight: 600;
-  line-height: 5vw;
+  line-height: 6vw;
+  letter-spacing: -3px;
+  text-align: center;
+  vertical-align: middle;
 }
 .location-container {
   overflow: hidden;
@@ -358,37 +310,31 @@ nav button:hover {
 .location-wrapper {
   display: flex;
   flex-direction: column;
-  animation: role-change 8s infinite;
-  height: 8vw;
+  animation: role-change 6s infinite;
+  height: 6vw;
+  align-items: center;
 }
 .location {
-  font-family: "Smooch Sans";
-  font-size: 8vw;
+  font-family: "Jura", sans-serif;
+  font-size: 6vw;
   display: block;
   white-space: nowrap;
-  text-align: center;
-  line-height: 8vw;
-  padding-left: 6px;
-  color: var(--hero-animation-color);
+  text-align: left;
+  line-height: 6vw;
+  color: var(--brand-yellow);
 }
 @keyframes role-change {
-  10% {
-    transform: translateY(0);
+  15% {
+    transform: translateY(0%);
   }
-  30% {
-    transform: translateY(-110%);
-  }
-  50% {
-    transform: translateY(-210%);
+  40% {
+    transform: translateY(-100%);
   }
   70% {
-    transform: translateY(-310%);
-  }
-  90% {
-    transform: translateY(-410%);
+    transform: translateY(-200%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0%);
   }
 }
 .profile {
@@ -435,7 +381,7 @@ nav button:hover {
   border: solid 0.5px var(--light-border);
 }
 .skill-card h5 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding-bottom: 3px;
 }
 .skill-card-wrapper {
@@ -455,7 +401,7 @@ nav button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 100px 70px;
-  gap: 70px;
+  gap: 100px;
 }
 .underline {
   width: 20vw;
@@ -536,6 +482,7 @@ nav button:hover {
 }
 .text-wrap p {
   font-size: 1.5rem;
+  line-height: 2rem;
   margin-bottom: 50px;
 }
 .text-wrap button {
@@ -544,6 +491,113 @@ nav button:hover {
   border-radius: 10px;
   font-size: 1.5rem;
   cursor: pointer;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--varCream);
+}
+.contact-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.contact-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 50px;
+}
+.form-wrapper h3 {
+  text-align: left;
+  font-family: "Jura";
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--varBrand);
+  margin-bottom: 10px;
+}
+.form-wrapper p {
+  font-family: "Jura";
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--varBrand);
+  margin-bottom: 50px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form-group label {
+  width: 40vw;
+  font-family: "Jura";
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--varBrand);
+}
+.form-group input {
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px var(--Primary-BG);
+  font-family: "Jura";
+  font-size: 1.2rem;
+}
+.form-group textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--varBrand);
+  font-family: "Jura";
+  font-size: 1.2rem;
+  min-height: 80px;
+  max-width: 100%;
+  min-width: 100%;
+}
+.contact-form button {
+  font-family: "Jura";
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #000;
+  width: clamp(50px, 50%, 400px);
+  background-color: var(--brand-yellow);
+  border: none;
+  padding: 10px 30px;
+  position: relative;
+  transition: 0.5s;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 40px;
+}
+.section-text {
+  gap: 30px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  padding: 50px;
+  font-family: "Jura";
+}
+.section-text h2 {
+  font-size: 3rem;
+}
+.section-text p {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .footer {
   background-color: var(--nav-BG);
@@ -579,7 +633,7 @@ nav button:hover {
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: var(--Accent-color);
+  background-color: var(--brand-yellow);
   height: 2px;
   width: 50px;
   box-sizing: border-box;
