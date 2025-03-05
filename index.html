@@ -35,7 +35,11 @@
                   alt="Company Logo"
                   height="50" />
               </picture>
-              <a class="close-link" href="#" onclick="event.preventDefault()">
+              <a
+                title="Close"
+                class="close-link"
+                href="#"
+                onclick="event.preventDefault()">
                 <svg
                   class="close-icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +64,7 @@
             <li class="hideOnMobile"><a href="#about">About</a></li>
             <li class="hideOnMobile"><a href="#contact">Contact Us</a></li>
             <li class="menu-btn" onclick="showSidebar()">
-              <a href="#" onclick="event.preventDefault()">
+              <a title="123" href="#" onclick="event.preventDefault()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -629,9 +633,9 @@
           <div class="footer-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#">Location</a></li>
-              <li><a href="#"></a></li>
+              <li><a title="About Us" href="#about">About Us</a></li>
+              <li><a title="Location" href="#">Location</a></li>
+              <li><a title="Link" href="#"></a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -648,9 +652,10 @@
             <div class="social-links">
               <a
                 data-social="Facebook"
-                style="--social-color: #0165e1"
                 target="_blank"
                 href="https://www.facebook.com/jamie.dryden.96"
+                rel="noopener"
+                title="Follow me on facebook"
                 ><svg
                   role="img"
                   viewBox="0 0 24 24"
@@ -662,9 +667,11 @@
               </a>
               <a
                 data-social="Twitter"
-                style="--social-color: #000000"
+                class="social-link twitter"
                 target="_blank"
                 href="https://x.com/jamiedryden99"
+                rel="noopener"
+                title="Follow me on Twitter"
                 ><svg
                   role="img"
                   viewBox="0 0 24 24"
@@ -676,9 +683,10 @@
               </a>
               <a
                 data-social="Instagram"
-                style="--social-color: #c13584"
                 target="_blank"
                 href="https://instagram.com/jamiedryden_"
+                rel="noopener"
+                title="Follow me on Instagram"
                 ><svg
                   role="img"
                   viewBox="0 0 24 24"
@@ -690,9 +698,10 @@
               </a>
               <a
                 data-social="LinkedIn"
-                style="--social-color: #0072b1"
                 target="_blank"
                 href="https://www.linkedin.com/in/jamie-dryden-529b4116a"
+                rel="noopener"
+                title="Connect with me on LinkedIn"
                 ><svg
                   role="img"
                   viewBox="0 0 16 16"
@@ -704,9 +713,10 @@
               </a>
               <a
                 data-social="Youtube"
-                style="--social-color: RGB(255, 0, 0)"
                 target="_blank"
                 href="https://youtube.com"
+                rel="noopener"
+                title="Subscribe to my YouTube"
                 ><svg
                   role="img"
                   viewBox="0 0 24 24"

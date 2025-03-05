@@ -75,6 +75,7 @@ body {
   height: 100vh;
   background-color: var(--side-nav-BG);
   border-left: solid 1px var(--border-color);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px var(--Shadow);
   display: none;
@@ -131,6 +132,7 @@ nav {
   align-items: center;
   mix-blend-mode: normal;
   border-radius: 100px;
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 }
 nav::before {
@@ -211,8 +213,8 @@ nav button:hover {
   letter-spacing: -3px;
   padding: 10px 20px;
   background: linear-gradient(rgb(255, 174, 0), rgb(238, 255, 0));
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: #111;
 }
@@ -654,6 +656,21 @@ nav button:hover {
 .footer-col ul li a:hover {
   color: var(--Primary-Text);
   padding-left: 8px;
+}
+a[data-social="Facebook"] {
+  --social-color: #0165e1;
+}
+a[data-social="Instagram"] {
+  --social-color: #c13584;
+}
+a[data-social="LinkedIn"] {
+  --social-color: #0072b1;
+}
+a[data-social="Twitter"] {
+  --social-color: #000000;
+}
+a[data-social="Youtube"] {
+  --social-color: red;
 }
 ul {
   list-style: none;
