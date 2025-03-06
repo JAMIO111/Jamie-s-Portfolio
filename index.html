@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jura:wght@300..700&display=swap"
       rel="stylesheet" />
-    <title>Web Developer | JDigital</title>
+    <title>Digital Solutions | JDigital</title>
     <meta
       name="description"
       content="UK based Web Design and Development Portfolio" />
@@ -17,21 +16,24 @@
       name="keywords"
       content="Web Design, Web Development, Power BI, Apps, Application, Dashboard, Portfolio, UK, JDigital" />
     <meta name="author" content="JDigital" />
-    <link rel="icon" href="ico/favicon-32x32.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="Ico/Logos/Logo-black-on-yellow.png"
+      type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <header id="home">
       <div class="nav-wrapper">
         <nav>
-          <ul class="side-nav">
+          <ul role="list" class="side-nav">
             <li onclick="hideSidebar()">
               <picture>
                 <source
-                  srcset="Images/DrydenLogoNoBGSmall.png"
+                  srcset="Ico/Logos/Logo-yellow-no-bg.png"
                   media="(prefers-color-scheme: dark)" />
                 <img
-                  src="Images/DrydenLogoNoBGSmall.png"
+                  src="Ico/Logos/Logo-yellow-no-bg.png"
                   alt="Company Logo"
                   height="50" />
               </picture>
@@ -54,21 +56,36 @@
               </a>
             </li>
             <li class="Home-list"><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li class="Home-list"><a href="services.html">Services</a></li>
+            <li class="Home-list"><a href="#about">About</a></li>
+            <li class="Home-list"><a href="#contact">Contact Us</a></li>
           </ul>
-          <ul class="nav">
-            <li class="hideOnMobile"><a href="#home">Home</a></li>
-            <li class="hideOnMobile"><a href="services.html">Services</a></li>
-            <li class="hideOnMobile"><a href="#about">About</a></li>
-            <li class="hideOnMobile"><a href="#contact">Contact Us</a></li>
+
+          <a href="#" class="logo"
+            ><img
+              class="nav-logo"
+              src="Ico/Logos/Logo-yellow-no-bg.png"
+              alt="logo" />JDigital</a
+          >
+          <ul role="list" class="nav">
+            <li class="hideOnMobile">
+              <a class="nav-options" href="#home">Home</a>
+            </li>
+            <li class="hideOnMobile">
+              <a class="nav-options" href="services.html">Services</a>
+            </li>
+            <li class="hideOnMobile">
+              <a class="nav-options" href="#about">About</a>
+            </li>
+            <li class="hideOnMobile">
+              <a class="nav-options" href="#contact">Contact Us</a>
+            </li>
             <li class="menu-btn" onclick="showSidebar()">
               <a title="123" href="#" onclick="event.preventDefault()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="26"
-                  height="26"
+                  width="32"
+                  height="32"
                   fill="currentColor"
                   class="bi bi-list"
                   viewBox="0 0 16 16">
@@ -79,6 +96,7 @@
               </a>
             </li>
           </ul>
+          <button class="nav-btn">Get Started</button>
         </nav>
       </div>
     </header>
@@ -116,7 +134,7 @@
         </div>
       </section>
       <section id="about" class="about">
-        <div class="slide">
+        <div id="skill-slide" class="slide">
           <div class="profile">
             <div class="profile-pic-container">
               <img
@@ -558,7 +576,7 @@
             by phone, email, or by submitting the contact form. We look forward
             to hearing from you!
           </p>
-          <div class="contact-detail-wrapper">
+          <address class="contact-detail-wrapper">
             <div class="contact-detail">
               <div class="contact-detail-title">
                 <svg
@@ -593,7 +611,7 @@
               </div>
               <p>drydenjamie@hotmail.com</p>
             </div>
-          </div>
+          </address>
         </div>
         <div class="form-wrapper">
           <h3>Contact Form</h3>

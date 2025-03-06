@@ -1,4 +1,6 @@
 :root {
+  --primary-ff: "Jura", helvetica, sans-serif;
+  --body-ff: "Jura", sans-serif;
   --Primary-BG: hsl(0, 0%, 97%);
   --Secondary-BG: hsl(0, 0%, 85%);
   --Primary-Text: hsl(0, 0%, 0%);
@@ -9,7 +11,7 @@
   --Shadow: rgba(0, 0, 0, 0.045);
   --border-color: hsl(0, 0%, 50%);
   --nav-BG: hsl(0, 0%, 100%);
-  --brand-yellow: hsl(51, 100%, 50%);
+  --brand-yellow: hsl(52.2, 100%, 50%);
   --side-nav-BG: hsl(0, 0%, 90%, 0.5);
   --icon-BG: hsl(0, 0%, 85%);
   --light-border: hsl(0, 0%, 80%);
@@ -18,6 +20,8 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
+    --primary-ff: "Jura", helvetica, sans-serif;
+    --body-ff: "Jura", sans-serif;
     --Primary-BG: hsl(0, 0%, 10%);
     --Secondary-BG: hsl(0, 0%, 20%);
     --Primary-Text: hsl(0, 0%, 90%);
@@ -28,7 +32,7 @@
     --Shadow: rgb(255, 255, 255, 0.03);
     --border-color: hsl(0, 0%, 50%);
     --nav-BG: hsl(0, 0%, 8%);
-    --brand-yellow: hsl(51, 100%, 50%);
+    --brand-yellow: hsl(52.2, 100%, 50%);
     --side-nav-BG: hsl(0, 0%, 10%, 0.5);
     --icon-BG: hsl(0, 0%, 15%);
     --light-border: hsl(0, 0%, 20%);
@@ -122,20 +126,16 @@ body {
   gap: 20px;
 }
 nav {
-  position: fixed;
-  top: 20px;
-  z-index: 999;
-  width: 50%;
-  box-shadow: 0px 3px 5px 0px var(--Shadow);
-  justify-content: space-between;
+  height: 50px;
   display: flex;
-  align-items: center;
-  mix-blend-mode: normal;
-  border-radius: 100px;
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  justify-content: space-between;
+  padding: 0 10px;
+  position: fixed;
+  width: 100%;
+  top: 15px;
+  z-index: 999;
 }
-nav::before {
+.nav::before {
   content: "";
   position: absolute;
   top: 0;
@@ -143,26 +143,54 @@ nav::before {
   width: 100%;
   height: 100%;
   opacity: 0.8;
-
   background-color: var(--nav-BG);
   z-index: -1;
   border-radius: 100px;
 }
-nav ul {
-  width: 100%;
+.nav-logo {
+  height: 70px;
+}
+.nav-btn {
+  font-family: var(--primary-ff);
+  font-size: 1.2rem;
+  height: 100%;
+  border-radius: 100px;
+  width: 150px;
+  color: var(--brand-yellow);
+  border: solid 2px var(--brand-yellow);
+  background-color: transparent;
+  margin-right: 5px;
+}
+.nav-btn:hover {
+  background-color: var(--brand-yellow);
+  color: var(--Primary-BG);
+  border: solid 2px var(--brand-yellow);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-btn:active {
+  transform: scale(0.95);
+  transition: 0.2s;
+  background-color: hsl(52.2, 100%, 60%);
+}
+.nav {
+  gap: 30px;
   display: flex;
-  height: 60px;
+  height: 50px;
   list-style: none;
-  flex-grow: 1;
-  align-items: stretch;
   justify-content: space-evenly;
+  border-radius: 100px;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  mix-blend-mode: normal;
+  box-shadow: 0px 1px 5px 0px var(--Shadow);
 }
 nav li {
+  flex: 1 0 auto;
   display: flex;
-  align-items: center;
-  align-self: stretch;
 }
-nav a {
+.nav-options {
   font-size: 1.25rem;
   padding: 10px 20px;
   display: flex;
@@ -171,6 +199,25 @@ nav a {
   height: 100%;
   align-items: center;
 }
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--brand-yellow);
+  font-weight: 600;
+}
+@media (max-width: 1024px) {
+  .logo {
+    display: none;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .nav {
+    margin: auto;
+  }
+}
 nav a:hover {
   color: var(--brand-yellow);
   transition: 0.5s;
@@ -178,17 +225,6 @@ nav a:hover {
 nav h1 {
   margin-right: auto;
   font-size: 2rem;
-}
-nav img {
-  src: var(--logo-img);
-  width: self-height;
-  height: 100%;
-  margin-right: 50px;
-}
-nav picture {
-  src: var(--logo-img);
-  width: self-height;
-  height: 100%;
 }
 .menu-btn {
   display: none;
@@ -205,7 +241,7 @@ nav button:hover {
   justify-content: center;
   gap: 100px;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   background-size: cover;
   background-image: url(img/blackwebBG.webp);
 }
@@ -282,7 +318,7 @@ nav button:hover {
 }
 
 .button:hover {
-  background-color: rgb(255, 217, 0);
+  background-color: var(--brand-yellow);
   transition-duration: 0.5s;
 }
 
@@ -375,7 +411,7 @@ nav button:hover {
 .skill-card {
   color: var(--Primary-Text);
   border-radius: 8px;
-  padding: 10px 20px;
+  padding: 10px 20px 15px 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -394,6 +430,11 @@ nav button:hover {
   gap: 20px;
   flex: 2;
 }
+@media (max-width: 600px) {
+  #skill-slide {
+    padding: 100px 20px;
+  }
+}
 .about svg {
   height: 40px;
   width: 40px;
@@ -404,8 +445,8 @@ nav button:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 70px;
-  gap: 100px;
+  padding: 100px Min(70px, 8vw);
+  gap: 70px;
 }
 .underline {
   width: 20vw;
@@ -428,8 +469,8 @@ nav button:hover {
   align-items: center;
 }
 .pc-frame {
-  width: 600px;
-  height: 400px;
+  width: 80vw;
+  height: 50vw;
   background-color: #222;
   border-radius: 15px;
   padding: 10px;
@@ -449,13 +490,13 @@ nav button:hover {
   object-fit: cover;
 }
 .stand {
-  width: 15px;
-  height: 50px;
+  width: 2vw;
+  height: 5vw;
   background-color: #444;
 }
 .pc-base {
-  width: 300px;
-  height: 20px;
+  width: 50%;
+  height: 2vw;
   background-color: #222;
   border-radius: 10px;
   margin: 0 auto;
@@ -743,8 +784,21 @@ ul {
   .hideOnMobile {
     display: none;
   }
+  .bi.bi-list {
+    color: var(--brand-yellow);
+  }
+  .logo {
+    display: flex;
+  }
   .menu-btn {
+    text-align: center;
     display: block;
+  }
+  .nav {
+    margin-right: 5px;
+    width: 60px;
+    height: 60px;
+    align-items: center;
   }
   .hero-btn-container {
     justify-content: center;
